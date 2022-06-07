@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Basic JS | MYC</title>
+	</head>
+	<body>
+		<script>
+			//#region BAI 2
+			const n = 6;
+			if (n > 0) {
+				if (n % 2 != 0) {
+					console.log('This is a odd number');
+				} else {
+					console.log('This is an even number');
+				}
+			} else {
+				console.log('Invalid, please re-enter the number');
+			}
+			//#endregion
+
+			//#region BAI 3
+			const a = 0;
+			const b = 2;
+			const c = 1;
+
+			if (a > b && a > c) {
+				console.log('The max number is a = ', a);
+			} else if (b > a && b > c) {
+				console.log('The max number is b = ', b);
+			} else {
+				console.log('The max number is c = ', c);
+			}
+			//#endregion
+
+			//#region BAI 4
+			const string = '      ide      ';
+
+			const newString = string.trim();
+
+			if (newString.length >= 4) {
+				const longString = newString.toUpperCase();
+
+				console.log('This is long string:', longString);
+			} else {
+				const shortString =
+					newString.toLowerCase() && newString.replace('e', 'Viet');
+
+				console.log('This is short string:', shortString);
+			}
+			//#endregion
+
+			//#region BAI 5
+			const string5 = 'quocViet';
+
+			const newstring5 = string5.toLowerCase();
+
+			const splitString = newstring5.split('');
+
+			splitString[0] = splitString[0].toUpperCase();
+
+			splitString[splitString.length - 1] =
+				splitString[splitString.length - 1].toUpperCase();
+
+			console.log(splitString.join(''));
+
+			//#endregion
+		</script>
+	</body>
+</html>

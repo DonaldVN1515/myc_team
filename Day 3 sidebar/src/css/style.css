@@ -1,0 +1,231 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+	font-family: "Roboto", sans-serif;
+    color: #fff;
+}
+body {
+    height: 93rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+#container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+
+}
+#wapper {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 0.8rem;
+    /* width: 25rem; */
+}
+#wapper.ml-5 {
+    margin-left: 5rem;
+    /* width: 9rem; */
+}
+#img img {
+    width: 120rem;
+}
+#header,
+#body {
+    padding: 0.6rem 2rem;
+}
+.header__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-items: center;
+    margin-top: -1rem;
+}
+
+.header__resize {
+    font-size: 1.4rem;
+    color: #fff;
+    margin-right: 0.4rem;
+}
+.header__three-dots {
+    display: flex;
+    font-size: 8rem;
+    margin-top: -4.5rem;
+    margin-left: -0.5rem;
+}
+.header__three-dots span:first-child {
+    color: #fd5c4c;
+}
+.header__three-dots span:nth-child(2) {
+    color: #ffbf37;
+}
+.header__three-dots span:last-child {
+    color: #65e350;
+}
+.header__account {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+    border-bottom: 0.2rem solid #1d2b41;
+    padding: 1rem 0rem ;
+}
+.header__logo {
+}
+
+.header__logo img,
+.footer__logo img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+.header__title {
+    padding: 0  3rem;
+    text-transform: capitalize;
+}
+#body {
+    
+}
+.body__menu {
+    border-bottom: 0.2rem solid #1d2b41;
+    padding-bottom: 1rem;
+}
+.body__title {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    opacity: 0.6;
+    padding: 1rem 0rem;
+}
+
+.body__list {
+    list-style: none;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    font-weight: 600;
+
+}
+.body__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0rem;
+}
+.body__item:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+.body__item div:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.body__item i {
+    line-height: 2rem;
+}
+.body__item a {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+}
+.body__item--notification {
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    background-color: #065ef4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+}
+.body__message {
+    padding: 0.8rem 0;
+    position: relative;
+}
+.body__switch {
+    cursor: pointer;
+}
+.body__switch i:first-child{
+    padding: 0 2rem;
+}
+.body__switch--inactive {
+    color: #3c4873;
+    cursor: default;
+}
+.body__item div img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+.body__list--border {
+    background-color: rgba(12, 18, 36, 0.6);
+    padding: 1rem 1.5rem 2rem 1.5rem;
+    border-radius: 1rem;
+}
+.body__message .body__item--notification {
+    background-color: #484d59;
+ }
+.body__all--message {
+    position: absolute;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    text-transform: capitalize;
+    color: #fff;
+    background-color: #065ef4;
+    padding: 1rem 1.5rem;
+    border-radius: 1.4rem;
+    border: none;
+    font-size: 1rem;
+    right: 50%;
+    transform: translateX(50%);
+    bottom: -3%;
+    cursor: pointer;
+}
+.body__all--message:hover {
+    opacity: 0.8;
+}
+.body__all--message i {
+    margin-bottom: 0.1rem;
+    font-size: 1rem;
+}
+.body__all--message p {
+    margin-left: 0.6rem;
+}
+#footer {
+    padding: 2rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer__name {
+    text-transform: capitalize;
+    font-size: 1rem;
+    margin-left: 1rem;
+    padding: 0 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.footer__title {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+.footer__subtitle {
+    opacity: 0.8;
+}
+.body__title--center,
+.body__item--center {
+    justify-content: center;
+}

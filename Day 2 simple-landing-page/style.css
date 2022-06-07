@@ -1,0 +1,137 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+	font-family: "Roboto", sans-serif;
+}
+#banner {
+}
+.banner__slide {
+	padding-top: 50%;
+	background: url(https://hoanghapc.vn/media/news/0510_hinh_nen_phong_canh1-2.jpg)
+		center / cover no-repeat;
+	position: relative;
+	filter: brightness(90%);
+}
+.banner__infor {
+	position: absolute;
+	bottom: 40%;
+	width: 100%;
+	text-align: center;
+	text-transform: capitalize;
+	color: #fff;
+	font-size: 2rem;
+}
+.banner__title {
+	font-weight: 400;
+	padding: 3rem 1rem;
+}
+.banner__subtitle {
+	font-weight: 400;
+	padding: 2rem 1rem 5rem 1rem;
+}
+.banner__btn {
+	text-transform: capitalize;
+	font-weight: 400;
+	padding: 1rem 2rem;
+	border-radius: 0.5rem;
+	border: none;
+	font-size: 1.5rem;
+	color: #fff;
+	background-color: orangered;
+	cursor: pointer;
+}
+#contact {
+	padding: 5rem 10rem;
+	text-transform: capitalize;
+}
+.contact__title {
+	padding: 1.6rem 0rem;
+	text-transform: uppercase;
+	font-size: 2rem;
+	font-weight: 700;
+	position: relative;
+}
+.contact__title::before {
+	content: "";
+	position: absolute;
+	width: 3%;
+	height: 0.4rem;
+	background-color: orange;
+	bottom: 0;
+}
+.contact__about {
+	display: flex;
+}
+.contact__info {
+	flex: 1;
+}
+.contact__info div {
+	padding: 1.6rem 0rem 1.6rem 1rem;
+	font-size: 1.4rem;
+}
+.contact__info div a {
+	color: #000;
+	text-decoration: none;
+	padding-left: 1rem;
+}
+.contact__infoTitle {
+	font-size: 1.6rem;
+	font-weight: 500;
+	padding: 1.2rem 0rem;
+}
+.contact__feedback {
+	flex: 2;
+}
+.contact__feedback input {
+	width: 100%;
+	padding: 1rem;
+	margin-bottom: 1rem;
+}
+
+.contact__feedback button {
+	padding: 1.5rem 2.5rem;
+	text-transform: capitalize;
+	border: none;
+	background-color: aqua;
+	color: #fff;
+	border-radius: 0.5rem;
+}
+.contact__feedback .feedback__message {
+	padding: 1rem 1rem 5rem 1rem;
+	
+}
+#footer {
+	display: flex;
+	font-size: 1.6rem;
+	padding: 5rem 10rem;
+	text-transform: capitalize;
+	justify-content: space-between;
+	background-color: #000;
+	color: #fff;
+}
+#footer h5 {
+	font-size: 2rem;
+	padding: 2rem 0;
+}
+#footer p,
+#footer > div {
+	color: #ccc;
+	padding-bottom: 3rem;
+}
+.footer__intro {
+}
+.footer__infor {
+}
+.footer__detail {
+}
+.footer__social > div {
+	display: flex;
+}
+.footer__social div i {
+	padding-right: 1rem;
+	margin-top: 0.2rem;
+}

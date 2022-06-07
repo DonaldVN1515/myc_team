@@ -1,0 +1,622 @@
+1) Khai báo biến;
+	var tenBien = value; systaxError : lỗi cú pháp
+	
+2) Comments
+	- Vô hiệu hóa mã
+		+ 1 dòng: //
+		+ Nhiều dòng: /* * */
+		+ Phím tắt: Ctrl + /
+		
+3) Hàm built-in
+	- alert();
+	- consolo.log(error,warn)();
+	- confirm();
+	- prompt();
+	- setTimeout(function() {
+	},1000);
+	- setInterval(function() {
+	},1000);
+		Math.random() : số random
+		
+4) Làm quen với toán tử
+	4.1) Toán tử số học - Arithmeric
+		var a = 1 + 2;
+		console.log(a);
+	4.2) Toán tử gán - Assignment
+		var a;
+		a = "Hồ Đức An"
+	4.3) Toán tử so sánh - Comparison
+		var a = 1;
+		var b = 2;
+		if(a < b){
+			console.log("đúng");
+		}
+	4.4) Toán tử logic - Logical
+		var a = 1;
+		var b = 2;
+		if(a >0 && b > 0){
+			console.log("đúng");
+		}
+
+5) Toán tử số học
+	+ 	: Cộng
+	- 	: Trừ
+	* 	: Nhân
+	**	: Lũy thừa
+	/ 	: Chia
+	%	: Chia lấy dư
+	++	: Tăng 1 giá trị số
+	--	: Giảm 1 giá trị số
+	
+6) Tiền tố, hậu tố của ++ Prefix , -- Postfix
+	var a = 3;
+	var b = a++ or ++a;  nếu a++ thì b = 3; nếu ++a thì b = 4;
+	console.log(b);
+
+7) Toán tử gán
+	=		x=y			x=y
+	+=		x+=y		x=x+y
+	-=		x-=y		x=x-y	
+	*=		x*=y		x=x*y
+	/=		x/=y		x=x/y
+	**=		x**=y		x=x**y
+
+8) Toán tử chuỗi
+	var name = 'Hồ'
+	name += ' An'
+	console.log(name) //  Hồ An
+	
+9) Toán tử so sánh
+	==		: Bằng
+	!=		: Không bằng
+	>		: Lớn hơn
+	<		: Bé hơn
+	>=		: Lớn hơn hoặc bằng
+	<=		: Bé hơn hoặc bằng
+
+10) Kiểu dữ liệu boolean
+	var a = 1;
+	var	b = 2;
+	var check = a < b;
+	console.log(check) // true
+
+11) Câu điều kiện if-else
+	Giá trị trong () if sẽ trả về false
+		-	0
+		-	false
+		-	'' - ""
+		-	undefined
+		-	NaN
+		-	null
+	Còn lại là true.
+
+12) Toán tử Logical
+	&&	: Và
+	||	: Hoặc
+	!	: Not
+13) Kiểu dữ liệu
+	- Dữ liệu nguyên thủy - Primitive Data
+		+ Number
+			var a = 1;
+			var b = 1.5;
+		+ String
+			var s = "Hồ An"
+			nếu muốn in ra :Hồ 'An thì => s = 'Hồ /' An' or s = "Hồ 'An"
+		+ Boolean
+			var isSuccess = true; or false
+		+ Undefined
+			var age;
+			console.log(age) => undefined
+		+ Null
+			var isNull = null; //không có gì
+		+ Symbol
+	- Dữ liệu phức tạp - Complex Data
+		+ Function
+			var myFunction = function() {
+			console.log("Hello");
+			}
+			myFunction();
+		+ Object
+			*) Object thường:
+				var myObject = {
+					name: 'Hồ An',
+					age: 18
+				}
+			*) Array:
+				var myArray = [
+					'Js'
+					'Java'
+					'OOP'
+				]
+	- Kiểm tra kiểu dữ liệu : dùng console.log(typeof biến);
+
+14) Toán tử so sánh (tt)
+	===		: kiểm tra cả kiểu dữ liệu
+	!==		: kiểm tra cả kiểu dữ liệu
+	var a = '1';
+	var b = 1;
+	console.log(a == b) => true
+
+15) Toán tử logical và phép so sánh
+	var result = 'A' && 'B' && 'C'  => C
+	var result = 'A' && 0 && 'C'  => 0
+	&& : Lấy kết quả của điều kiện cuối cùng nếu những giá trị đầu không nằm trong 6 cái false
+	var result = 'A' && 'B' && 'C'  => A
+	var result = 0 && 'A' && 'C'  => A
+	|| : Láy kết quả đầu tiên nó gặp nếu điều kiện đó không thuộc 6 cái false
+
+16) Chuỗi
+	1) Tạo chuỗi
+		C1: Nên dùng
+		var name = "An"
+		C2: kiểu dữ liệu object !String
+		var name = new String("AN")
+	2) Sử dụng backslash(\)
+		- \'  : '
+		- \"  : "
+		VD:
+		Hồ 'An = 'Hồ \'An\'' 
+		"Đây là dấu \" : lỗi => "Đây là dấu \\"
+	3) Xem độ dài chuỗi
+		tenBien.length
+	4) Chú ý độ dài khi viết Code
+	5) Template string ES6
+		`Tôi là: ${tenBien1} ${tenBien2}`
+
+17) Làm việc với chuỗi
+	1) Length
+		tenBien.length
+	2) Find index
+		tenBien.indexOf('somthing') // tìm chuỗi đó xem nó nằm ở vị trí thứ mấy, nếu k tìm thấy thì trả về -1
+		tenBien.indexOf('somthing', number) // tìm sau cái somthing nếu có 2 cái somthing
+		tenBien.lastIndexOf('somthing') // trả về vị trí chuối mà nó tìm thấy
+		tenBien.search('something')	// hơi giống indexof , không có number
+	3) Cut string
+		tenBien.slice(startNumber, endNumber) // cắt từ startNumber đến endNumber
+		Nếu: chỉ cho 1 giá trị startNumber thì nó sẽ trả về từ startNumber đến chữ cuối
+		tenBien.slice(startNumber)
+		Nếu: Muốn cắt bên phải qua thì đánh số âm bắt đầu từ 0 và đếm từ phải qua trái
+		tenBien.slice(startNumber, endNumber)
+	4) Replace
+		tenBien.replace('giá trị muốn thay đổi', 'giá trị mới')
+		Nếu muốn thay thế tất cả các chuỗi 'giá trị muốn thay đổi' trong 1 string:
+		tenBien.replace(/giá trị muốn thay đổi/g, 'giá trị mới')
+	5) Convert to upper case
+		tenBien.toUpperCase();
+	6) Convert to lower case
+		tenBien.toLowerCase();
+	7) Trimvit
+		tenBien.trim() // xóa dấu cách ở 2 bên đầu chuỗi
+	8) Split // để nhét chuỗi vào mảng
+		var languages = 'javascript, PHP, Ruby';
+		languages.split(', ')// tìm điểm chung, ở đây là dấu ,_
+		Nếu muốn nhét từng kí tự vào mảng:
+		languages.split('')
+	9) Get a character by index
+		C1:
+			tenBien.charAt(number); // dữ liệu string
+		C2:
+			tenBien[number]; // undefined
+
+18) Số và làm việc với số
+	1) Tạo giá trị number
+		C1:
+			var age = 18;
+		C2:
+			var otherNumber = new Number(18);
+	-- Cách kiểm tra biến có phải NaN hay k: isNaN(tenBien); // true or false
+	2) Làm việc với Number
+		- Chuyển Number thành string: tenBien.toString();
+		- Làm tròn số thập phân : Pi.toFixed(nếu điền số zô đây thì nó lấy đúng bao nhiêu số phía sau);
+19) Mảng
+	1) Tạo mảng
+		C1:
+			var languages = [
+				'JS',
+				'JV',
+				'OOP',
+			];
+		C2:
+			var languages = new Array(
+				'JS',
+				'JV',
+				'OOP',
+			);
+	- Kiểm tra có phải là Array không: Array.isArray(languages);
+	2) Truy xuất mảng
+		- Độ dài mảng: languages.length
+		- Lấy phần tử: languages[index]
+		
+20) Làm việc với mảng
+	1) To String
+		Chuyển array thành string
+		var languages = new Array(
+				'JS',
+				'JV',
+				'OOP',
+			);
+		console.log(languages.toString());
+	2) Join
+		Cũng là chuyển array thành string nhưng:
+		languages.join(' - '); // ngăn cách các phần tử trong mảng = dấu -
+	3) Pop // xóa phần tử cuối mảng và trả về phần tử đã xóa
+		languages.pop();
+	4) Push // thêm 1 hoặc nhiều phần tử ở cuối mảng 
+		languages.push('Dart', 'QQ');
+	5) Shift // xóa phần tử đầu mảng và trả về phần tử đã xóa
+	6) UnShift // thêm 1 hoặc nhiều phần tử ở đầu mảng 
+	7) Splicing
+		- Xóa 1 phần tử trong Array
+			languages.splice(index, số lượng phần tử muốn xóa);
+		- Thêm phần tử
+			languages.splice(index, 0, phần tử 'ABC', 'DCA');
+	8) Concat // nối Array
+		var languages1[somthing]
+		var languages2[something]
+		languages1.concat(languages2);
+	9) Slicing // cắt phần tử của mảng
+		languages.slice(1,2);
+
+21) Hàm
+	1) Tạo hàm
+		function tenBien() {
+			alert("huehue");
+		}
+	2) Gọi hàm
+		tenBien();
+
+22) Tham số trong hàm
+	function tenBien(thamSo1, thamSo2) {
+		console.log(thamSo1);
+		console.log(thamSo2);
+	}
+	tenBien('Hồ', 'An');
+	Arguments:
+	console.log(arguments) // chỉ sử dụng được bên trong function, trả về mảng
+	
+	function writelog() {
+		for(var test of arguments){
+			console.log(tets)
+		}
+	}
+	writelog('hhh', 'aaa')
+
+23) Return trong hàm
+	var tenBien = confirm('something');  //true or false
+
+24) Một số điều cần biết về function
+	- Khi function cùng tên: khi gọi function thì nó chạy function cuối cùng
+
+25) Các loại function
+	- Declaration function:
+		function tenBien() {
+		}
+	- Expression function
+		var tenBien = function() {
+		}
+	
+26) Polyfill
+	-trình duyệt cũ jj đó
+
+27) Object
+	1) Tạo object
+		var tenBien = {
+			key: "value",
+		}
+	2) Thêm key-value
+		tenBien.newKey = 'new vaule';
+		để đặt key có dấu - :  ['new-key']
+	3) Lấy value ra ngoài
+		tenBien.tenKey;
+		tenBien['tenKey'];
+	4) Xóa value
+		delete tenBien.key;
+		
+28) Xây dựng đối tượng (Object contructor)
+	function Nguoi(name, age, address){
+    this.name = name;
+    this.age = age;
+    this.address = address;
+    this.getName = function(){
+        return this.name;
+    }
+	}
+	var p1 = new Nguoi('An', 19, 'ABC');
+	var p2 = new Nguoi('Cẩn', 19, 'CBA');
+	p1.test1 = "huehue"; // thêm key zô 
+	console.log(p1.getName())
+	
+29) Object nguyên mẫu (Object prototype)
+	tenBien.prototype.test1 = "something";
+	nếu "something" = function() thì dùng this. được
+	vd:
+	function Nguoi(name, age, address){
+		this.name = name;
+		this.age = age;
+		this.address = address;
+		this.getName = function(){
+			return this.name;
+		}
+	}
+	Nguoi.prototype.test = "huhu"
+	var p1 = new Nguoi('An', 19, 'ABC');
+	var p2 = new Nguoi('Cẩn', 19, 'CBA');
+	console.log(p1.test)
+	
+30) Đối tượng Date
+	Tạo đối tượng date:
+		var date = new Date();
+		console.log(`${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`);
+
+31) Lệnh rẽ nhánh if-else
+	if(){
+	
+	}else if(){
+	
+	}else{
+	
+	}
+
+32) Lệnh rẽ nhánh switch
+	var date = 3;
+	switch(date){
+		case 1:
+			break;
+		case 2:
+		case 3:
+			break;
+		default:
+	}
+	
+33) Toán tử 3 ngôi (Ternary operator)
+	var tenBien = vế1 > 0 ? 'something' : 'something'
+
+34) Giới thiệu về vòng lặp
+	1) Vòng lặp for
+	2) Vòng lặp for/in  // lặp key
+	3) Vòng lặp for/of	// lặp vaule
+	4) Vòng lặp while
+	5) Vòng lặp do/while
+
+35) Vòng lặp for
+	for (var i = 1; i <= 1000; i++){
+		//To-Do: 
+	}
+	
+36) Vòng lặp for-in
+	var tenBien = {
+		key1: 'aaa',
+		key2: 'bbb'
+	}
+	for (var key in tenBien){
+		
+	}
+
+37) Vòng lặp for-of
+	var tenBien = [
+		'aaa',
+		'bbb'
+	]
+	for (var key of tenBien){
+		
+	}
+	nếu muốn dùng cho object:
+	for (var key of Object.keys(hoặc values)(tenBien){
+		
+	}
+	
+38)	Vòng lặp while
+	while(đk){
+	
+	}
+	
+39)	Vòng lặp do-while
+	do{
+	
+	}while(đk)
+	
+40)	Break và Continue
+	break; thoát khỏi vòng lặp
+	continue; bỏ qua
+
+41) Làm việc với mảng
+	var tenMang = [
+	{object1},
+	{object2},
+	{object3}
+	
+	]
+	-	forEach(); // lọc qua từng phần tử của mảng
+			tenMang.forEach((thamSo)=>{
+				console.log(thamSo);
+			});
+	-	every(); // tất cả các phần tử của mảng phải thỏa mãn 1 điều kiện nào đó
+			tenMang.every((thamSo)=>{
+				return thamSo.thuộctính == 0;  //true or false
+			});
+	-	some(); // chỉ cần 1 phần tử của mảng phải thỏa mãn 1 điều kiện nào đó
+			tenMang.some((thamSo)=>{
+				return thamSo.thuộctính == 0;  //true or false
+			});
+	- find(); tìm 1 ...
+			tenMang.find((thamSo)=>{
+				return thamSo.thuộctính == "An";  //chỉ trả về 1 đối tượng
+			});
+	- filter(); tìm nhiều...
+			tenMang.filter((thamSo)=>{
+				return thamSo.thuộctính == "An";  //chỉ trả về tất cả đối tượng thỏa đk
+			});
+
+42)	Array map()
+	map(); // thay đổi tất cả các phần tử
+	
+43) Array reduce()
+	reduce();
+	
+44) includes
+	var title = 'huehuea123';
+	console.log(title.includes('uea')); // true
+	dùng trong array cũng dc
+	
+45) Math object
+	- Math.PI // số pi
+	- Math.round(); // làm tròn số
+	- Math.abs(); // giá trị tuyệt đối
+	- Math.ceil(); // làm tròn trên
+	- Math.floor();// làm tròn dưới
+	- Math.random();// ngẫu nhiên < 1
+	- Math.min();// nhỏ nhất
+	- Math.max();//lớn nhất
+	
+46)  callback
+	function myFunction(y){
+    y('haha')
+}
+function myCallback(x){
+    console.log(x)
+}
+myFunction(myCallback)
+
+
+47) DOM
+	document.write('Hello guy'); // ghi vào DOM sau cùng của thẻ body
+	
+48) Get element methods. // lấy các element
+	- Có 5 cách:
+		+ Id: document.getElementById('id');
+		+ Class: document.getElementsByClassName('class');
+		+ Tag: document.getElementsByTagName('tag');
+		+ Css selector: document.querySelector('.class .class:nth-child(2)hoặc:first-child #id');
+		+ html collection: 
+		
+49) DOM Atribute
+	- Thêm atribute:
+		var test = document.querySelector('h1')
+		test.className(id, title) = 'something';
+		hoặc
+		test.setAtribute('class', 'something');
+	- Lấy ra atribute:
+		test.getAtribute('class');
+
+50) Inner Text and Text Content
+	var test = document.querySelector('.heading')
+		test.innerText;
+		hoặc
+		test.textContent;
+		
+	- Muốn sửa text:
+		test.innerText = 'something';
+		hoặc 
+		test.textContent = 'something';
+	
+51) Thêm 1 element vào 1 element có sẵn , innerHTML và outerHTML
+	var test = document.querySelector('.heading')
+		test.innerHTML = '<h1 id = '01'> Something </h1>'
+	innerHTML thì tạo trong class heading, còn outerHTML nó đè luôn heading nên sẽ mất class
+
+52) DOM style
+	var test = document.querySelector('.box')
+	test.style.width = '100px'
+	test.style.height = '200px'
+	test.style.backgroundColor = 'red'
+	
+	hoặc
+	Object.assign(test.style,{
+	width : 100px
+	height : 200px
+	backgroundColor : red
+	})
+	
+53) ClassList
+	var test = document.querySelector('.box');
+	test.classList;
+	// Xem có mấy class trong 1 element
+		test.classList.length;
+	// Thêm class
+		test.classList.add('newClass1, newClass2, newClass3');
+	// Kiểm tra class có tồn tại trong element không
+		test.classList.contains('newClass2');    // true
+	// Xóa class
+		test.classList.remove('newClass1');
+	// nếu element có class thì xóa, nếu không thì thêm vào
+		test.classList.toggle('newClass1');
+	
+54) Dom Events// tìm trên mạng bằng từ khóa dom events
+	- Atribute events
+	- Assign events using the element node
+	var test = document.getElementById('')
+	test.obclick = (e)=>{}
+	
+55) DOM events tt
+	- onclick : nhấn vào
+	- onchange: lấy thông tin nếu có sự thay đổi
+	var myBt = document.querySelector('#height');
+		myBt.onchange = (e)=>{
+			console.log(e.target.value)
+		}
+	- oninput: nhập đến đâu lấy đến đó
+		var myBt = document.querySelector('#height');
+		myBt.oninput = (e)=>{
+			console.log(e.target.value)
+		}
+	- với type: checkbox thì dùng onchange và muốn lấy true false thì: e.target.checked // true or false
+	- onkeydown(up): lấy key or mouse mà mik nhấn vào khung text
+		e.target.value  // lấy giá trị
+		console.log(e.which) //lấy phím
+	- onkeypress: lấy giá trị khi nhấn giữ
+	- onblur : click ra ngoài
+56) PreventDefault and Stop Proagation;
+	- preventDefault: bỏ hành vi mặc định của thẻ // startsWith('chuỗi')  kiểm tra chuỗi có bắt đầu = () hay k
+		e.preventDefault();
+	- stopProagation: bỏ hành vi nổi bọt
+		e.stopProagation();
+57) Event listener // dùng đồng loạt các sự kiện 1
+	- Hủy bỏ lắng nghe DOM Event: test.onclick = ()=>{} .. rỗng
+	- Tao 1 event listener :
+		test.addEventListener('click', ()=>{
+			code
+		})
+	- Hủy bỏ lắng nghe Event listener: test.removeEventListener('click', một function riêng)
+	
+58) JSON
+	var json = '1'
+	- Là một định dạng dữ liệu (chuỗi)
+	- JavaScript Object Notation
+	- JSON: Number, Boolean, Null, Array, Object
+	- Đổi:
+		- Từ js sang JSON: JSON.stringify(json)
+		- Từ JSON sang js: JSON.parse(json)
+		
+59) Promise 
+	- Sync (đồng bộ): cái nào viết trước in ra trước thì gọi là đồng bộ
+	- ASync (không đồng bộ): viết trước nhưng in ra sau
+		- setTimeout
+		- setInterval
+		- fetch
+		- XMLHttpRequest
+		- đọc file
+		- request animation
+	- Tạo 1 Promise:
+		var promise = new Promise(
+			function(resolve, reject){
+				//logic
+				//thành công: resolve()
+				//thất bại: reject()
+			}
+		)
+		promise
+			.then(()=>{
+			
+			})
+			.catch(()=>{
+			
+			})
+			.finally(()=>{
+			
+			})
+	
+	- Tạo nhanh promise:
+		- var promise = Promise.resolve();
+		- var promise = Promise.reject();
+		- Promise.all([promise1,promise2]);
+		<iframe width="853" height="480" src="https://www.youtube.com/embed/0SJE9dYdpps?list=PL_-VfJajZj0VgpFpEVFzS5Z-lkXtBe-x5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

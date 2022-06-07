@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Basic JS - Array & Object | MYC</title>
+	</head>
+	<body>
+		<h1>Basic JS - Array & Object | MYC</h1>
+
+		<script>
+			//#region BAI 1
+			// console.log('BAI 1 SQUARE');
+
+			// function logSquare(a) {
+			// 	a *= a;
+			// 	console.log(a);
+			// }
+			// logSquare(4);
+
+			// function returnSquare(a) {
+			// 	a *= a;
+			// 	return a;
+			// }
+			// console.log(returnSquare(4));
+			//#endregion
+
+			//#region BAI 2
+			// console.log('BAI 2 MIN');
+			// arr = [2, 6, 8, 10, 15, 28];
+
+			// function logMin() {
+			// 	const min = arr[0];
+			// 	for (let i = 0; i < arr.length; i++) {
+			// 		if (min > arr[i]) {
+			// 			min = arr[i];
+			// 		}
+			// 	}
+			// 	console.log(min);
+			// }
+			// logMin();
+
+			// function returnMin() {
+			// 	const min = arr[0];
+			// 	for (let i = 0; i < arr.length; i++) {
+			// 		if (min > arr[i]) {
+			// 			min = arr[i];
+			// 		}
+			// 	}
+			// 	return min;
+			// }
+			// console.log(returnMin());
+			//#endregion
+
+			//#region BAI 3
+			// console.log('BAI 3 MERGE');
+
+			// function logMerge() {
+			// 	a = ['MYC', 'Learn Together', 'Blub'];
+			// 	b = ['BDA', 'Football'];
+
+			// 	a = a.concat(b);
+			// 	console.log(a);
+			// }
+			// logMerge();
+
+			// function returnMerge() {
+			// 	a = ['MYC', 'Learn Together', 'Blub'];
+			// 	b = ['BDA', 'Football'];
+			// 	a = a.concat(b);
+			// 	return a;
+			// }
+			// console.log(returnMerge());
+			//#endregion
+
+			//#region BAI 4
+			// console.log('BAI 4 CHECK ODD OR EVEN ARRAY');
+
+			// function logCheckArr(arr) {
+			// 	arr = [2, 4, 7, 8];
+
+			// 	let result = false;
+
+			// 	for (let i = 0; i < arr.length; i++) {
+			// 		const check = arr[i];
+			// 		if (check % 2 != 0) {
+			// 			result = true;
+			// 		}
+			// 	}
+			// 	result
+			// 		? console.log('There has an odd item in array')
+			// 		: console.log('This is an even array');
+			// }
+			// logCheckArr();
+
+			//#endregion
+
+			//#region BAI 5
+			// console.log('BAI 5 PRINT YOUR NAME');
+			// const intro = ['Hello', 'Everyone', 'My', 'Name', 'Is:'];
+
+			// function yourName(name) {
+			// 	intro.push(name);
+			// 	text = intro.join(' ');
+			// 	console.log(text);
+			// }
+			// yourName('Viet');
+
+			//#endregion
+		</script>
+		<!-- DAY 14 -->
+		<script>
+			console.log('Two Sum');
+			//#region TWO SUM
+			/*	array nums & target
+				for i
+					for j
+						if num1 + num2 == target
+							return index1 & index2
+			*/
+			// let nums = [3, 2, 4];
+			// let target = 6;
+
+			// let i, j;
+			// let len = nums.length;
+			// let result = [];
+
+			// for (i = 0; i < len; i++) {
+			// 	for (j = i + 1; j < len; j++) {
+			// 		if (nums[i] + nums[j] == target) {
+			// 			result.push(i, j);
+			// 		}
+			// 	}
+			// }
+			// console.log(result);
+			//#endregion
+
+			console.log('3 Sum Closest');
+			//#region 3 SUM CLOSEST
+			/*
+			Sort
+				for i
+					for j
+						for k
+							sum = sum[i] + sum[j] + sum[k]
+							Handle closest number
+							diff = |sum - target|
+							if
+								result
+			*/
+			// let nums = [-1, 1, 2, 3];
+			// let target = 1;
+
+			// let i, j, k, sum, result;
+			// let len = nums.length;
+			// let min = null;
+
+			// nums.sort((a,b) => a-b)
+			// for (i = 0; i < len; i++) {
+			// 	for (j = i + 1; j < len; j++) {
+			// 		for (k = j + 1; k < len; k++) {
+			// 			sum = nums[i] + nums[j] + nums[k];
+			// 			diff = Math.abs(sum - target);
+			// 			if (min === null || min > diff) {
+			// 				min = diff;
+			// 				result = sum;
+			// 			}
+			// 		}
+			// 	}
+			// }
+			// console.log(result);
+			//#endregion
+
+			console.log('First Missing Positive');
+			//#region FIRST MISSING POSITIVE
+			/*
+			sort
+			 A: nums = [] OR nums = [-1, -2, -3, -4]; return 1;
+			 B: nums = [6, 7, 8, 9]; // return 1;
+			 C: nums = [1, 2, 3]; // return 4;
+			*/
+			// let nums = [6, 7, 8, 9];
+
+			// let len = nums.length;
+			// nums = nums.sort((a, b) => a - b);
+			// if (nums.length === 0 || nums[nums.length - 1] <= 0) console.log(1);
+			// for (let i = 1; i < nums[nums.length - 1]; i++) {
+			// 	if (nums.indexOf(i) === -1) console.log(i);
+			// }
+			// console.log(nums[nums.length - 1] + 1);
+			//#endregion
+
+			console.log('Best Time to Buy and Sell Stock I II III');
+			//#region Best Time to Buy and Sell Stock I II III
+			/*
+				I
+					A: Find profit (right - left > 0) => maxProfit
+					B: No transaction (left > right)=> profit = 0
+				II
+
+					A: profit (right - left > 0 => maxProfit (in a day)
+						while
+							if prices[left] < prices[right]
+								profit = prices[right] - prices[left]
+
+								maxProfit = Math.max
+							left++
+							right++
+					B: No transaction (left > right)=> profit = 0
+				III
+					A: [3,3,5,0,0,3,1,4] => Find maxProfit = no more two max profit
+					B:No transaction (left > right)=> profit = 0
+				*/
+			prices = [3, 3, 5, 0, 0, 3, 1, 4];
+			console.log(prices);
+
+			// const maxProfit = (prices) => {
+			// let left = 0,
+			// 	right = 1,
+			// 	maxProfit = 0;
+			// while (right < prices.length) {
+			// 	if (prices[left] < prices[right]) {
+			// 		profit = prices[right] - prices[left];
+			// 		maxProfit = Math.max(maxProfit, profit);
+			// 	} else {
+			// 		left = right;
+			// 	}
+			// 	right++;
+			// }
+			// return maxProfit;
+			// }
+
+			// const maxProfit = (prices) => {
+			// 	let left = 0,
+			// 		right = 1,
+			// 		maxProfit = 0;
+
+			// 	while (right < prices.length) {
+			// 		if (prices[left] < prices[right]) {
+			// 			profit = prices[right] - prices[left];
+			// 			maxProfit = maxProfit + profit;
+			// 		}
+			// 		left++;
+			// 		right++;
+			// 	}
+			// 	return maxProfit;
+			// };
+
+			const maxProfit = (prices) => {
+				let left = 0,
+					right = 1,
+					maxProfit = 0;
+				profitArr = [];
+
+				while (right < prices.length) {
+					if (prices[left] < prices[right]) {
+						profit = prices[right] - prices[left];
+						profitArr.push(profit);
+					} else {
+						left = right;
+					}
+					right++;
+				}
+				maxProfit =
+					Math.max(...profitArr) +
+					profitArr.sort(function (a, b) {
+						return b - a;
+					})[1];
+				return maxProfit;
+			};
+			console.log('maxProfit: ', maxProfit(prices));
+
+			//#endregion
+		</script>
+	</body>
+</html>
